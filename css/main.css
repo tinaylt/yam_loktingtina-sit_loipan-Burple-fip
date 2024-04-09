@@ -39,6 +39,7 @@ p h1 h2 h3 {
     height: 120px;
     border: none;
     transition: all .5s ease;
+    cursor: pointer;
 }
 
 #main-nav button.expanded {
@@ -75,9 +76,14 @@ p h1 h2 h3 {
     font-size: 1.5rem;
 }
 
+#burger-con ul li a:hover {
+    color: #873587;
+}
+
 #logo {
     justify-self: center;
     margin-top: 7px;
+    cursor: pointer;
 }
 
 #logo img {
@@ -90,6 +96,7 @@ p h1 h2 h3 {
     border: none;
     background-color: white;
     margin-left: -10px;
+    cursor: pointer;
 }
  #search-bar {
     justify-self: center;
@@ -112,43 +119,59 @@ p h1 h2 h3 {
    grid-row:1/2;
    /* get rid of margin 0 auto from the original class */
    margin: 0;
+   margin-left: -15px;
 }
 
 #hero-backgound-box {
     align-self: end;
     background-color: #907EF2;
-    padding: 15px;
+    padding: 20px 0 10px 25px;
     border-radius: 0 90px 0 0;
 }
 
 #hero-backgound-box h2 {
     color: white;
+    font-size: 2em;
+    /* padding-left: 17px; */
 }
+
+/*Body*/
 
 #hero-summary {
     background-color: #907EF2;
     padding-bottom: 40px;
     border-radius: 0 0 80px 0;
     color: white;
+    padding-left: 20px;
 }
 
 #hero-summary h3 {
     padding: 12px;
+    font-size: 1.5em;
 }
 
 #hero-summary p {
     padding-left: 12px;
-    margin-right: 20px;
+    margin-right: 35px;
+    line-height: 25px;
 }
 
-/*Body*/
+/**Product section**/
 
 .products-section h2 {
     padding-left: 30px;
     padding-top: 20px;
     margin-top: 15px;
+
+}
+
+.products-section h2 a {
     color: #D95CE0;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
+}
+
+.products-section h2 a:hover {
+    color: #873587;
 }
 
 #orange-bg {
@@ -157,11 +180,11 @@ p h1 h2 h3 {
     background: url(../images/bg_orange.jpg) no-repeat;
     background-size: cover;
     height: 300px;
+    width: 200px;
     margin-left: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 200px;
     overflow: hidden;
 }
 
@@ -172,23 +195,23 @@ p h1 h2 h3 {
     z-index: 1;
 }
 
-#product-brief {
+.product-brief {
     margin-top: 40px;
 }
 
-#product-brief h3 {
+.product-brief h3 {
     padding-bottom: 20px;
     color: #D95CE0;
     font-size: 1.425rem;
 }
 
-#product-brief p {
+.product-brief p {
     padding-bottom: 20px;
     font-size: 1.140rem;
     margin-right: 10px;
 }
 
-#product-brief button {
+.product-brief button {
     width: 150px;
     padding: 10px 0;
     border-radius: 20px 20px;
@@ -240,13 +263,31 @@ p h1 h2 h3 {
     z-index: 1;
 }
 
+/*hover animation*/
+#orange-bg img:hover {
+    transform: scale(1.125);
+}
+
+#grape-bg img:hover {
+    transform: scale(1.125);
+}
+
+#lemon-bg img:hover {
+    transform: scale(1.125);
+}
+
+.product-brief button:hover {
+    background-color: #873587;
+}
+
+
 /*footer*/
 #footer {
     border: 1px solid grey;
     background-color: #907EF2;
     color: white;
     padding-top: 20px;
-    border-radius:100px 0 0 0;
+    border-radius:120px 0 0 0;
 }
 
 #footer ul li a {
@@ -272,26 +313,30 @@ p h1 h2 h3 {
 }
 
 .line {
-    border-top: 2px dashed white;
-    width: 410px;
+    border-bottom: 2px dashed white;
 }
-.line p {
+
+.terms p {
     padding: 3px;
     font-size: 0.75rem;
 }
 
-.space {
-    margin-top: 10px;
+.terms {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.end {
-    margin-bottom: 10px;
+.terms p:hover {
+    text-decoration: underline;
 }
+
+
 
 /*footor animation*/
 
 #footer ul li span {
     padding: 5px 10px;
+    margin-left: 5px;
 }
 
 #footer ul li a:hover + span{
@@ -309,30 +354,369 @@ p h1 h2 h3 {
     color: #873587;
 }
 
+/*tablet screen*/
 
-@media screen and (min-width: 1200px) {
-    
+@media screen and (min-width: 768px) {
+
+    /*header menu*/
+
     #main-nav button {
         display: none;
     }
 
-    #burger-con
+    #main-nav {
+        grid-row-start: 2;
+        margin: 10px;
+    }
+
+    #burger-con {
+        display: block;
+        position: relative;
+        width: max-content;
+        height: max-content;
+        box-shadow: none;
+        background-color: white;
+        border-radius: 0;
+        margin-left: 40px;
+        
+    }
+    
+    #burger-con ul {
+        display: inline;
+        margin: 0 0 0 100px;
+
+    }
+        
+    #burger-con li {
+        padding: 0;
+        border-bottom: 0;
+        display: inline;
+    }
+    
+    #burger-con ul li a {
+        color: #D95CE0;
+        font-size: 1.4rem;
+        padding-right: 50px;
+    }
         
 
     #logo {
-        /* z-index: 1; */
+        z-index: 1;
         justify-self: left;
-        width: 500px;
+        width: 400px;
         margin-bottom: 0;
         grid-row-start: 1;
         grid-row-end: 3;
+
     }
 
+    #logo img {
+        width: 200px;
+        padding: 0 0;
+    }
 
     #search-bar {
         display: none;
     }
 
+    /*body section*/
+
+    #hero-summary {
+        padding-bottom: 90px;
+        border-radius: 0 0 200px 0;
+    }
+
+    #hero-summary h3 {
+        padding-left: 10px;
+        font-size: 1.75em;
+        padding-top: 10px;
+        
+    }
+
+    #hero-summary p {
+        margin-top: 15px;
+        padding-left: 10px;
+        margin-right: 30px;
+        font-size: 1.25rem;
+        line-height: 30px;
+    }
+
+    .products-section h2 {
+        margin-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .products-section h2 a {
+        font-size: 1.75em;
+    }
+
+    #orange-bg {
+        justify-self: right;
+        width: 230px;
+        height: 350px;
+    }
+
+    #grape-bg {
+        justify-self: right;
+        width: 230px;
+        height: 350px;
+    }
+
+    #lemon-bg {
+        justify-self: right;
+        width: 230px;
+        height: 350px;
+    }
+
+    #orange-bg img {
+        width: 130px;
+        padding-top: 60px;
+    }
+
+    #grape-bg img {
+        width: 130px;
+        padding-top: 60px;
+    }
+
+    #lemon-bg img {
+        width: 130px;
+        padding-top: 60px;
+    }
+
+    .product-brief {
+        text-align: left;
+        margin: 60px 60px 0 10px;
+    }
+
+    .product-brief h3 {
+        font-size: 2em;
+    }
+
+    .product-brief p {
+        font-size: 1.25rem;
+        line-height: 30px;
+    }
+
+    .product-brief button {
+        width: 250px;
+        padding: 15px 10px;
+        border-radius: 30px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.2em;
+
+    }
+
+    /*Footer*/
+    
+    #footer {
+        border-radius:180px 0 0 0;
+    }
+
+    .footer-nav {
+        margin-left: 50px;
+    }
+
+    #footer ul li a {
+        font-size: 1.5rem;
+    }
+
+    #social-media {
+        align-self: center;
+        margin-top: 90px;
+        margin-left: 15px;
+    }
+
+    #social-media img {
+        width: 70px;
+    }
+
+    .line {
+        margin: 0 80px;
+    }
+
+    .terms {
+        margin: 10px 80px;
+        margin-bottom: 20px;
+    }
+
+    .terms p {
+        font-size: 0.8em;
+        cursor: pointer;
+    }
+
+    #footer ul li a:hover + span{
+        background-size: 100%;
+    }
+
+}
+
+/*desktop screen*/
+
+@media screen and (min-width: 1200px) {
+    
+/*header*/
+
+    #main-nav {
+        margin: 15px 15px;
+        justify-self: left;
+    }
+        
+    #burger-con li {
+        padding: 0;
+        border-bottom: 0;
+        display: inline;
+    }
+    
+    #burger-con ul li a {
+        font-size: 1.6rem;
+        padding-right: 80px;
+    }
+        
+
+    #logo {
+        z-index: 1;
+        justify-self: left;
+        width: 520px;
+        margin-bottom: 0;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-left: 30px;
+    }
+
+    #logo img {
+        width: 310px;
+        padding: 5px 0;
+    }
+
+    #search-bar {
+        display: none;
+    }
+
+    #hero-backgound-box {
+        background-color: #907EF2;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+    
+    #hero-backgound-box h2 {
+        font-size: 3em;
+    }
+
+
+    /*Body section*/
+    
+    #hero-summary h3 {
+        padding-left: 30px;
+        font-size: 2.5rem;
+        padding-top: 30px;
+        
+    }
+    
+    #hero-summary p {
+        margin-top: 20px;
+        padding-left: 30px;
+        margin-right: 20px;
+        font-size: 1.7rem;
+        line-height: 40px;
+    }
+
+    /**Product section**/
+
+    .products-section {
+        margin: 0 10px 0 10px;
+        justify-self: center;
+    }
+
+    .products-section h2 {
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .products-section h2 a {
+        font-size: 3em;
+    }
+
+    #grape-bg {
+        grid-row-start: 1;
+        justify-self: center;
+        margin-top: 60px;
+        height: 500px;
+        width: 300px;
+    }
+
+    #lemon-bg {
+        grid-row-start: 1;
+        justify-self: center;
+        margin-top: 60px;
+        height: 500px;
+        width: 300px;
+    }
+    
+    #orange-bg {
+        justify-self: center;
+        margin-top: 60px;
+        height: 500px;
+        width: 300px;
+    }
+
+    #orange-bg img {
+        width: 160px;
+        padding-top: 70px;
+    }
+
+    #grape-bg img {
+        width: 160px;
+        padding-top: 70px;
+    }
+
+    #lemon-bg img {
+        width: 160px;
+        padding-top: 70px;
+    }
+
+    .product-brief {
+        text-align: center;
+        margin: 0 0 40px 0;
+    }
+    
+    .product-brief h3 {
+        font-size: 2.5em;
+    }
+    
+    .product-brief p {
+        font-size: 1.25rem;
+        height: 280px;
+        /* margin-left: 40px; */
+    }
+
+    .product-brief button {
+        margin-bottom: 30px;
+    }
+    
+    /*footer*/
+
+    .footer-nav {
+        margin-left: 70px;
+    }
+
+    #footer ul li a {
+        font-size: 2rem;
+    }
+
+    #social-media {
+        margin-left: 70px;
+    }
+
+    #social-media img {
+        width: 90px;
+    }
+
+    .terms p {
+        font-size: 1em;
+    }
 
 }
 
