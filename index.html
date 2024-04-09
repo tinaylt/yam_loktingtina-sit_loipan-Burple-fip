@@ -14,8 +14,8 @@
 <body>
     <h1 class="hidden">Welcome to Burple website!</h1>
     <div id="sticky-nav-con">
-        <header id="main-header">
-            <nav id="main-nav">
+        <header id="main-header" class="grid-con">
+            <nav id="main-nav" class="col-start-1 col-end-2">
                 <h2 class="hidden">Main Navigation</h2>
                 <button id="button"></button>
                 <div id="burger-con">
@@ -23,20 +23,25 @@
                         <li><a href="#">Stories</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="#">Videos</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li id="contact-menu"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
-            <div id="logo">
+
+            <div id="logo" class="col-start-2 col-end-4">
                 <img src="images/burple_colour-update.svg" alt="burple logo">
             </div>
-            <div id="search-bar">
-                <img src="images/search-bar.svg" alt="search-bar-icon">
+            
+            <div id="search-bar" class="col-start-4 col-end-5">
+                <button id="search-bar-but">
+                    <img src="images/search-bar.svg" alt="search bar icon">
+                </button>
             </div>
+
         </header>
     </div>
 
-    <section id="hero">
+    <section id="hero" class="full-width-grid-con">
         <h2 class="hidden">Every sip with a joy</h2>
         <img
             sizes="100vw"
@@ -51,29 +56,37 @@
             images/index-hero_scale-w_2029.jpg 2029w,
             images/index-hero_scale-w_2040.jpg 2040w"
             src="index-hero_scale-w_2040.jpg"
-            alt="kid with burple">
-        <div id="hero-backgound-box">
-            <h3>Brand History</h3>
+            alt="kid with burple" id="index-hero">
+            
+        <!--can't flow on top of the hero-image-->
+        <div class="grid-con">
+            <div id="hero-backgound-box" class="col-start-1 col-end-4">
+                <h2>Brand History</h2>
+            </div>
         </div>
+
     </section>
-    <section>
-        <div>
-            <h4>Every sip with a joy</h4>
+
+    <section class="grid-con">
+
+        <div id="hero-summary" class="col-span-full">
+            <h3>Every sip with a joy</h3>
             <p>
                 Step into a world with vibrancy, and every sip is a burst of joy! Burple fruity drinks are a celebration of modern simplicity and colourful fun. We believe in keeping it simple yet exciting, offering a refreshing blend of flavours that captivate the true taste, where every drop is a commitment to a brighter, fruit-filled 
             </p>
-        </div>
+            </div>
     </section>
 
-    <section>
-        <h3 class="hidden">Products Section</h3>
+    <section class="products-section">
+        <h2>Products</h2>
         
-        <div>
-            <div id="orange-bg">
+        <div class="grid-con">
+
+            <div id="orange-bg" class="col-start-1 col-end-3">
                 <img src="images/juice_orange.png" alt="burple orange">
             </div>
 
-            <div>
+            <div class="col-start-3 col-end-5">
                 <h4>Orange</h4>
                 <p>
                     Bursting with vibrant citrus flavour and freshly squeezed orange juice, each sip is a refreshing taste of sunshine. Perfect for breakfast, brunch, or any time you crave a revitalising pickme-up.
@@ -82,41 +95,36 @@
                 <button class="detail" type="button">Detail</button>
             </div>
 
-            <div>
-                <div id="grape-bg">
-                    <img src="images/juice_grape.png" alt="burple grape">
-                </div>
+            <div id="grape-bg" class="col-start-1 col-end-3">
+                <img src="images/juice_grape.png" alt="burple grape">
+            </div>
     
-                <div>
-                    <h4>Grape</h4>
-                    <p>
-                        Experience the rich flavour of our grape juice, crafted from the finest handpicked grapes. Each sip is a burst of natural sweetness,complemented by a hint of tartness.
-                    </p>
+            <div class="col-start-3 col-end-5">
+                <h4>Grape</h4>
+                <p>
+                    Experience the rich flavour of our grape juice, crafted from the finest handpicked grapes. Each sip is a burst of natural sweetness,complemented by a hint of tartness.
+                </p>
     
-                    <button class="detail" type="button">Detail</button>
-                </div>
+                <button class="detail" type="button">Detail</button>
             </div>
 
-            <div>
-                <div id="lemon-bg">
-                    <img src="images/juice_lemon.png" alt="burple lemon">
-                </div>
-    
-                <div>
-                    <h4>Lemon</h4>
-                    <p>
-                        Made from freshly squeezed lemons. A vibrant twist to your favourite recipes, from refreshing
-                        beverages to savoury dishes and sweet treats. It's not just delicious but also nutritious.
-                    </p>
-    
-                    <button class="detail" type="button">Detail</button>
-                </div>
+            <div id="lemon-bg" class="col-start-1 col-end-3">
+                <img src="images/juice_lemon.png" alt="burple lemon">
             </div>
+    
+            <div class="col-start-3 col-end-5">
+                <h4>Lemon</h4>
+                <p>
+                Made from freshly squeezed lemons. A vibrant twist to your favourite recipes, from refreshing beverages to savoury dishes and sweet treats. It's not just delicious but also nutritious.
+                </p>
+    
+                <button class="detail" type="button">Detail</button>
+            </div>   
         </div>
     </section>
 
-    <footer>
-        <div>
+    <footer class="grid-con">
+        <div class="col-start-1 col-end-3">
             <nav>
                 <ul>
                     <li><a href="#">Stories</a></li>
@@ -127,21 +135,21 @@
             </nav>
         </div>
 
-        <div>
+        <div class="col-start-1 col-end-4">
             <img src="images/facebook-icon.svg" alt="facbook icon">
             <img src="images/twitter-logo.svg" alt="twitter icon">
             <img src="images/insta-logo.svg" alt="insta-icon">
         </div>
 
         <!--line here-->
-        <div>
-            <p>Terms of use</p>
-            <p>Accessibility</p>
-            <p>private Policy</p>
-            <p>Press</p>
-        </div>
+    
+        <p class="col-start-1 col-end-3">Terms of use</p>
+        <p class="col-start-3 col-end-5">Accessibility</p>
+        <p class="col-start-1 col-end-3">private Policy</p>
+        <p class="col-start-3 col-end-5">Press</p>
 
-        <div>
+
+        <div class="col-span-full">
             &copy;2024, Burple All right reserved.
         </div>
 

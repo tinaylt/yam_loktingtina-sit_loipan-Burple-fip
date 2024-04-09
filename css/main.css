@@ -1,0 +1,145 @@
+ /* 1. ---General Styles--- */
+
+ body {
+    color: #707070;
+    font-family: 'Sanchez', 'Times New Roman', serif;
+}
+ 
+ a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+ 
+ input, textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p h1 h2 h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Index page mobile*/
+
+#main-nav button {
+    background: url(../images/hamburger-menu.svg) no-repeat center;
+    width: 80px;
+    height: 90px;
+    border: none;
+    transition: all .5s ease;
+}
+
+#burger-con ul {
+    background-color: #E8ECFF;
+    width: 180px;
+    height: 300px;
+    box-shadow: 10px 5px 5px #873587 ;
+    border-radius: 10%;
+    position: absolute;
+    top: 14%;
+    left: 6%;
+    display: none;
+}
+    
+#burger-con li {
+    text-align: center;
+    margin-left: -10px;
+    margin-right: 20px;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    border-bottom: 2px dashed #D95CE0;
+}
+
+#burger-con ul li a {
+    color: #D95CE0;;
+}
+
+#logo {
+    width:200px;
+    /* margin-left: -20px; */
+}
+
+#search-bar button {
+    width: 80px;
+    height: 90px;
+    border: none;
+    background-color: white;
+    margin-left: -10px;
+}
+
+#index-hero {
+    grid-column: 1/-1;
+    grid-row: 1/1;
+}
+
+#index-hero {
+    object-fit: cover;
+}
+
+#hero .grid-con {
+/* Telling this grid to live in the middle column */
+   grid-column: 1/3;
+   /* also telling it stay in the first row, so it overlaps the hero image */
+   grid-row:1/2;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
+
+#hero-backgound-box {
+    align-self: end;
+    background-color: #907EF2;
+    padding: 15px;
+    border-radius: 0 90px 0 0;
+}
+
+#hero-backgound-box h2 {
+    color: white;
+}
+
+#hero-summary {
+    background-color: #907EF2;
+    padding-bottom: 40px;
+    border-radius: 0 0 80px 0;
+    color: white;
+}
+
+#hero-summary h3 {
+    padding: 12px;
+}
+
+#hero-summary p {
+    padding-left: 12px;
+    margin-right: 20px;
+}
+
+/*Body*/
+
+.products-section h2 {
+    padding-left: 30px;
+    padding-top: 20px;
+    color: #D95CE0;
+}
+
+#orange-bg {
+    margin-top: 30px;
+    border-radius: 70px 0 70px 0;
+    background: url(../images/bg_orange.jpg) no-repeat;
+    background-size: 100%;
+    height: 300px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#orange-bg img {
+    width: 120px;
+    padding-top: 25px;
+}
