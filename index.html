@@ -15,7 +15,7 @@
     <h1 class="hidden">Welcome to Burple website!</h1>
     <div id="sticky-nav-con">
         <header id="main-header" class="grid-con">
-            <nav id="main-nav" class="col-start-1 col-end-2">
+            <nav id="main-nav" class="col-start-1 col-end-2 l-col-start-5 l-col-end-12">
                 <h2 class="hidden">Main Navigation</h2>
                 <button id="button"></button>
                 <div id="burger-con">
@@ -28,11 +28,11 @@
                 </div>
             </nav>
 
-            <div id="logo" class="col-start-2 col-end-4">
+            <div id="logo" class="col-start-2 col-end-4 l-col-start-1 l-col-end-5">
                 <img src="images/burple_colour-update.svg" alt="burple logo">
             </div>
             
-            <div id="search-bar" class="col-start-4 col-end-5">
+            <div id="search-bar">
                 <button id="search-bar-but">
                     <img src="images/search-bar.svg" alt="search bar icon">
                 </button>
@@ -86,21 +86,20 @@
                 <img src="images/juice_orange.png" alt="burple orange">
             </div>
 
-            <div class="col-start-3 col-end-5">
-                <h4>Orange</h4>
+            <div id="product-brief" class="col-start-3 col-end-5">
+                <h3>Orange</h3>
                 <p>
                     Bursting with vibrant citrus flavour and freshly squeezed orange juice, each sip is a refreshing taste of sunshine. Perfect for breakfast, brunch, or any time you crave a revitalising pickme-up.
                 </p>
-
-                <button class="detail" type="button">Detail</button>
+                <button type="button">Detail</button>
             </div>
 
             <div id="grape-bg" class="col-start-1 col-end-3">
                 <img src="images/juice_grape.png" alt="burple grape">
             </div>
     
-            <div class="col-start-3 col-end-5">
-                <h4>Grape</h4>
+            <div id="product-brief" class="col-start-3 col-end-5">
+                <h3>Grape</h3>
                 <p>
                     Experience the rich flavour of our grape juice, crafted from the finest handpicked grapes. Each sip is a burst of natural sweetness,complemented by a hint of tartness.
                 </p>
@@ -112,8 +111,8 @@
                 <img src="images/juice_lemon.png" alt="burple lemon">
             </div>
     
-            <div class="col-start-3 col-end-5">
-                <h4>Lemon</h4>
+            <div id="product-brief" class="col-start-3 col-end-5">
+                <h3>Lemon</h3>
                 <p>
                 Made from freshly squeezed lemons. A vibrant twist to your favourite recipes, from refreshing beverages to savoury dishes and sweet treats. It's not just delicious but also nutritious.
                 </p>
@@ -123,34 +122,34 @@
         </div>
     </section>
 
-    <footer class="grid-con">
-        <div class="col-start-1 col-end-3">
+    <footer id="footer">
+        <div class="grid-con">
+            <div class="col-start-1 col-end-3">
             <nav>
                 <ul>
-                    <li><a href="#">Stories</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="x#">Videos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Stories</a><span></span></li>
+                    <li><a href="products.html">Products</a><span></span></li>
+                    <li><a href="x#">Videos</a><span></span></li>
+                    <li><a href="contact.html">Contact</a><span></span></li>
                 </ul>
             </nav>
         </div>
 
-        <div class="col-start-1 col-end-4">
+        <!--should use object tag instead of img tag-->
+        <div id="social-media" class="col-start-1 col-end-4">
             <img src="images/facebook-icon.svg" alt="facbook icon">
             <img src="images/twitter-logo.svg" alt="twitter icon">
             <img src="images/insta-logo.svg" alt="insta-icon">
         </div>
+    </div>
 
         <!--line here-->
-    
-        <p class="col-start-1 col-end-3">Terms of use</p>
-        <p class="col-start-3 col-end-5">Accessibility</p>
+        <div class="grid-con line">
+        <p class="space col-start-1 col-end-3">Terms of use</p>
+        <p class="space col-start-3 col-end-5">Accessibility</p>
         <p class="col-start-1 col-end-3">private Policy</p>
         <p class="col-start-3 col-end-5">Press</p>
-
-
-        <div class="col-span-full">
-            &copy;2024, Burple All right reserved.
+        <p class="end col-span-full">&copy;2024, Burple All right reserved.</p>
         </div>
 
     </footer>
@@ -158,3 +157,4 @@
     <script src="js/main.js"></script>   
 </body>
 </html>
+
