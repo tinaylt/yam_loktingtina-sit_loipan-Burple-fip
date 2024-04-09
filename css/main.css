@@ -52,7 +52,7 @@ p h1 h2 h3 {
 }
 
 #burger-con {
-    /* display: none; */
+    display: none;
     position: absolute;
     width: 180px;
     height: 300px;
@@ -720,3 +720,7 @@ p h1 h2 h3 {
 
 }
 
+
+/*Product page*/
+
+/*Mobile size*/

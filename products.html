@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+        <link href="css/grid.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <title>Burple! Every sip with a joy!</title>
+    </head>
+
+    <body>
+        <h1 class="hidden">Welcome to Burple website!</h1>
+        <div id="sticky-nav-con">
+            <header id="main-header" class="grid-con">
+                <nav id="main-nav" class="col-start-1 col-end-2 m-col-start-5 m-col-end-12">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <button id="button"></button>
+                    <div id="burger-con">
+                        <ul>
+                            <li><a href="#">Stories</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li id="contact-menu"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+    
+                <div id="logo" class="col-start-2 col-end-4 m-col-start-1 m-col-end-5">
+                    <img src="images/burple_colour-update.svg" alt="burple logo">
+                </div>
+                
+                <div id="search-bar">
+                    <button id="search-bar-but">
+                        <img src="images/search-bar.svg" alt="search bar icon">
+                    </button>
+                </div>
+
+
+    
+            </header>
+        </div>
+
+        <section id="hero" class="full-width-grid-con">
+            <h2 class="hidden">Burple products!</h2>
+
+            <img
+            sizes="100vw"
+            srcset="
+            images/hero-product-scale-w_350.jpg 350w,
+            images/hero-product-scale-w_655.jpg 655w,
+            images/hero-product-scale-w_1079.jpg 1079w,
+            images/hero-product-scale-w_1356.jpg 1356w"
+            src="images/hero-product-scale-w_1356.jpg"
+            alt="kids holding fruit" id="index-hero">
+
+
+            <div class="grid-con">
+                <div id="hero-backgound-box" class="col-start-1 col-end-4 m-col-start-1 m-col-end-7">
+                    <h2>Products</h2>
+                </div>
+            </div>
+    
+
+        </section>
+
+        <section class="grid-con">
+
+            <div id="hero-summary" class="col-span-full m-col-span-full">
+                <h3>Taste the Essence of Freshly-Picked Fruit</h3>
+                <p>
+                    Indulge in the vibrant essence of summer with our delicious Lemon, Apple, Orange, Cherry, Peach, and Grape varieties. Each sip is a burst of natural goodness, carefully crafted from the finest fruits to tantalize your taste buds and quench your thirst.
+                </p>
+                </div>
+
+        </section>
+
+        <div class="burple-products grid-con">
+            <div class="col-start-1 col-end-3">
+                <div>
+                    <img src="images/juice_lemon.png" alt="burple lemon">
+                </div>
+                <h3>Lemon</h3>
+            </div>
+
+            <div class="col-start-3 col-end-5">
+                <div>
+                    <img src="images/juice_orange.png" alt="burple orange">
+                </div>
+                <h3>Orange</h3>
+            </div>
+
+            <div class="col-start-1 col-end-3">
+                <div>
+                    <img src="images/juice_apple.png" alt="burple Apple">
+                </div>
+                <h3>Apple</h3>
+            </div>
+
+
+            <div class="col-start-3 col-end-5">
+                <div>
+                    <img src="images/juice_grape.png" alt="burple Grape">
+                </div>
+                <h3>Grape</h3>
+            </div>
+
+            <div class="col-start-1 col-end-3">
+                <div>
+                    <img src="images/juice_cherry.png" alt="burple Cherry">
+                </div>
+                <h3>Cherry</h3>
+            </div>
+
+            <div class="col-start-3 col-end-5">
+                <div>
+                    <img src="images/juice_peach.png" alt="burple Peach">
+                </div>
+                <h3>peach</h3>
+            </div>
+        </div>
+
+
+        <!--line-->
+        <div></div>
+
+        <section class="grid-con">
+            <h3 class="col-span-full">Download</h3>
+            <div id="gallery" class="col-span-full">
+                <img id="img" src="images/download_1.jpg" alt="label download">
+                <nav>
+                <ul id="download-gallery">
+                    <li data-species="download_1"><button></button></li>
+                    <li data-species="download_2"><button></button></li>
+                    <li data-species="download_3"><button></button></li>
+                    <li data-species="download_4"><button></button></li>
+                </ul>
+                </nav>
+            </div>
+
+        </section>
+
+        <footer id="footer">
+            <div class="grid-con">
+                <div class="footer-nav col-start-1 col-end-3 m-col-start-1 m-col-end-7">
+                <nav>
+                    <ul>
+                        <li><a href="#">Stories</a><span></span></li>
+                        <li><a href="products.html">Products</a><span></span></li>
+                        <li><a href="x#">Videos</a><span></span></li>
+                        <li><a href="contact.html">Contact</a><span></span></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!--should use object tag instead of img tag-->
+            <div id="social-media" class="col-start-1 col-end-4 m-col-start-8 m-col-end-13">
+                <img src="images/facebook-icon.svg" alt="facbook icon">
+                <img src="images/twitter-logo.svg" alt="twitter icon">
+                <img src="images/insta-logo.svg" alt="insta-icon">
+            </div>
+            
+            <div class="line col-span-full"></div>
+            </div>
+    
+            <!--line here-->
+        <div class="grid-con terms">
+            <p class="col-start-1 col-end-3 m-col-start-1 m-col-end-4">Terms of use</p>
+            <p class="col-start-3 col-end-5 m-col-start-4 m-col-end-7">Accessibility</p>
+            <p class="col-start-1 col-end-3 m-col-start-7 m-col-end-10">Private Policy</p>
+            <p class="col-start-3 col-end-5 m-col-start-10 m-col-end-13">Press</p>
+            <p class="col-span-full">&copy;2024, Burple All right reserved.</p>
+        </div>
+    
+        </footer>
+    
+
+        <script src="js/main.js"></script>   
+    </body>
+</html>
