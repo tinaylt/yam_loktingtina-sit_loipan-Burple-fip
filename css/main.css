@@ -1,5 +1,10 @@
  /* 1. ---General Styles--- */
 
+html {
+    max-width: 1200px;
+    margin: auto;
+}
+
  body {
     color: #707070;
     font-family: 'Sanchez', 'Times New Roman', serif;
@@ -31,48 +36,65 @@ p h1 h2 h3 {
 #main-nav button {
     background: url(../images/hamburger-menu.svg) no-repeat center;
     width: 80px;
-    height: 90px;
+    height: 120px;
     border: none;
     transition: all .5s ease;
 }
 
-#burger-con ul {
+#main-nav button.expanded {
+    transform: rotate(90deg);
     background-color: #E8ECFF;
+}
+
+#main-nav {
+    justify-self: center;
+}
+
+#burger-con {
+    /* display: none; */
+    position: absolute;
     width: 180px;
     height: 300px;
-    box-shadow: 10px 5px 5px #873587 ;
+    box-shadow: 10px 5px 5px #873587;
+    background-color: #E8ECFF;
     border-radius: 10%;
-    position: absolute;
-    top: 14%;
-    left: 6%;
-    display: none;
+}
+
+#burger-con ul {
+    text-align: center;
+    margin: 0 20px 10px -10px;
 }
     
 #burger-con li {
-    text-align: center;
-    margin-left: -10px;
-    margin-right: 20px;
     padding: 20px 0;
-    font-size: 1.5rem;
     border-bottom: 2px dashed #D95CE0;
 }
 
 #burger-con ul li a {
-    color: #D95CE0;;
+    color: #D95CE0;
+    font-size: 1.5rem;
 }
 
 #logo {
-    width:200px;
-    /* margin-left: -20px; */
+    justify-self: center;
+    margin-top: 7px;
+}
+
+#logo img {
+    width: 300px;
 }
 
 #search-bar button {
-    width: 80px;
-    height: 90px;
+    width: 100px;
+    height: 130px;
     border: none;
     background-color: white;
     margin-left: -10px;
 }
+ #search-bar {
+    justify-self: center;
+ }
+ 
 
 #index-hero {
     grid-column: 1/-1;
@@ -124,22 +146,193 @@ p h1 h2 h3 {
 .products-section h2 {
     padding-left: 30px;
     padding-top: 20px;
+    margin-top: 15px;
     color: #D95CE0;
+    font-size: 1.7rem;
 }
 
 #orange-bg {
     margin-top: 30px;
     border-radius: 70px 0 70px 0;
     background: url(../images/bg_orange.jpg) no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 300px;
     margin-left: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
+    width: 200px;
+    overflow: hidden;
 }
 
+
 #orange-bg img {
-    width: 120px;
+    width: 110px;
     padding-top: 25px;
+    z-index: 1;
 }
+
+#product-brief {
+    margin-top: 40px;
+}
+
+#product-brief h3 {
+    padding-bottom: 20px;
+    color: #D95CE0;
+    font-size: 1.425rem;
+}
+
+#product-brief p {
+    padding-bottom: 20px;
+    font-size: 1.140rem;
+    margin-right: 10px;
+}
+
+#product-brief button {
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 20px 20px;
+    border: none;
+    background-color: #CE5ED1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#grape-bg {
+    margin-top: 30px;
+    border-radius: 70px 0 70px 0;
+    background: url(../images/bg_grape.jpg) no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 200px;
+    overflow: hidden;
+}
+
+#grape-bg img {
+    width: 110px;
+    padding-top: 25px;
+    z-index: 1;
+}
+
+#lemon-bg {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border-radius: 70px 0 70px 0;
+    background: url(../images/bg_lemon.jpg) no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 200px;
+    overflow: hidden;
+}
+
+#lemon-bg img {
+    width: 110px;
+    padding-top: 25px;
+    z-index: 1;
+}
+
+/*footer*/
+#footer {
+    border: 1px solid grey;
+    background-color: #907EF2;
+    color: white;
+    padding-top: 20px;
+    border-radius:100px 0 0 0;
+}
+
+#footer ul li a {
+    color: white;
+    font-size: 1.425rem;
+}
+
+#footer ul {
+    margin-top: 20px;
+}
+
+#footer ul li {
+    padding: 5px 0;
+}
+
+#social-media {
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+#social-media img {
+    padding-right: 10px;
+}
+
+.line {
+    border-top: 2px dashed white;
+    width: 410px;
+}
+.line p {
+    padding: 3px;
+    font-size: 0.75rem;
+}
+
+.space {
+    margin-top: 10px;
+}
+
+.end {
+    margin-bottom: 10px;
+}
+
+/*footor animation*/
+
+#footer ul li span {
+    padding: 5px 10px;
+}
+
+#footer ul li a:hover + span{
+    background: url(../images/star.svg) no-repeat;
+    background-size: 90%;
+}
+
+#footer a:hover {
+    border-bottom: 2px dashed white;
+    padding-bottom: 5px;
+    transition: 0s;
+}
+
+#social-media:hover {
+    color: #873587;
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+    #main-nav button {
+        display: none;
+    }
+
+    #burger-con
+        
+
+    #logo {
+        /* z-index: 1; */
+        justify-self: left;
+        width: 500px;
+        margin-bottom: 0;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+
+    #search-bar {
+        display: none;
+    }
+
+
+}
+
