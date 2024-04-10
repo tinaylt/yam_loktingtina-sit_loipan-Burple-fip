@@ -108,9 +108,9 @@ p h1 h2 h3 {
     grid-row: 1/1;
 }
 
-#index-hero {
+/* #index-hero {
     object-fit: cover;
-}
+} */
 
 #hero .grid-con {
 /* Telling this grid to live in the middle column */
@@ -125,14 +125,13 @@ p h1 h2 h3 {
 #hero-backgound-box {
     align-self: end;
     background-color: #907EF2;
-    padding: 20px 0 10px 25px;
-    border-radius: 0 90px 0 0;
+    padding: 15px 0 0px 30px;
+    border-radius: 0 50px 0 0;
 }
 
 #hero-backgound-box h2 {
     color: white;
-    font-size: 2em;
-    /* padding-left: 17px; */
+    font-size: 1.75em;
 }
 
 /*Body*/
@@ -724,3 +723,106 @@ p h1 h2 h3 {
 /*Product page*/
 
 /*Mobile size*/
+
+.burple-products {
+    margin: 80px 30px 40px 30px;
+}
+
+.products-bg {
+    border-radius: 90px 0 90px 0;
+    height: 350px;
+    width: 250x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px #907EF2;
+}
+
+.products-bg img {
+    z-index: 1;
+    width: 130px;
+    margin-top: 30px;
+}
+
+.burple-products h3 {
+    color: #D95CE0;
+    text-align: center;
+    padding: 20px 0 50px 0;
+    font-size: 1.7em;
+}
+
+#lemon {
+    background: url(../images/bg_lemon.jpg) no-repeat;
+    background-size: cover;
+}
+
+#orange {
+    background: url(../images/bg_orange.jpg) no-repeat;
+    background-size: cover;
+}
+
+#apple {
+    background: url(../images/bg_apple.jpg) no-repeat;
+    background-size: cover;
+}
+
+#grape {
+    background: url(../images/bg_grape.jpg) no-repeat;
+    background-size: cover;
+    box-shadow: 3px 3px 10px #907EF2;
+}
+
+#cherry {
+    background: url(../images/bg_cherry.jpg) no-repeat;
+    background-size: cover;
+}
+
+#peach {
+    background: url(../images/bg_peach.jpg) no-repeat;
+    background-size: cover;
+}
+
+.line-seperator {
+    width: auto;
+    border-bottom: 5px dashed #D95CE0;
+    margin: 0 30px;
+}
+
+#labels-download {
+    margin: 50px 10px 30px 10px;
+}
+
+#labels-download h3 {
+    font-size: 1.7em;
+    color: #D95CE0;
+    margin-bottom: 20px;
+}
+
+#download-gallery li button {
+    width: 20px;
+    height: 20px;
+    background-color: #D95CE0;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+#download-gallery li {
+    display: inline;
+    padding: 0 5px;
+}
+
+#download-gallery {
+    text-align: center;
+}
+
+#download-gallery li button:hover {
+    width: 40px;
+    border-radius: 20px;
+    background-color: #873587;
+    /* background-color: white;
+    border: 6px solid #D95CE0; */
+}
+
+
+
