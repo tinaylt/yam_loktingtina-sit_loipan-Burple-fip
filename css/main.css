@@ -53,7 +53,7 @@ p h1 h2 h3 {
 }
 
 #burger-con {
-    display: none;
+    /* display: none; */
     position: absolute;
     width: 180px;
     height: 300px;
@@ -968,7 +968,6 @@ p h1 h2 h3 {
         font-size: 1.25em;
     }
 
-
     #contact-form {
     margin-bottom: 50px;
     }
@@ -988,6 +987,40 @@ p h1 h2 h3 {
         width: 180px;
     }
 
+}
 
+/*Desktop screen size*/
+
+
+@media screen and (min-width: 1200px) {
+
+    #hero-summary-s {
+        padding-left: 35px;
+    }
+
+    #hero-summary-s h3 {
+        font-size: 2em;
+    }
     
+    #hero-summary-s p {
+        font-size: 1.5em;
+    }
+
+    #contact-form input, textarea {
+        padding: 27px;
+        font-size: 1.5em;
+        width: 900px;
+    }
+ 
+    #contact-form textarea {
+        height: 400px;
+        margin-bottom: 40px;
+    }
+
+
+    #contact-form input[type="submit"] {
+        width: 250px;
+        padding: 20px 0;
+    }
+
 }
