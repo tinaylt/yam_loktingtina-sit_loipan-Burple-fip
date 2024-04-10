@@ -1,7 +1,7 @@
  /* 1. ---General Styles--- */
 
 html {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
 }
 
@@ -32,6 +32,7 @@ p h1 h2 h3 {
 }
 
 /*Index page mobile*/
+
 
 #main-nav button {
     background: url(../images/hamburger-menu.svg) no-repeat center;
@@ -84,6 +85,7 @@ p h1 h2 h3 {
     justify-self: center;
     margin-top: 7px;
     cursor: pointer;
+    z-index: 1;
 }
 
 #logo img {
@@ -101,23 +103,20 @@ p h1 h2 h3 {
  #search-bar {
     justify-self: center;
  }
- 
+
 
 #index-hero {
     grid-column: 1/-1;
     grid-row: 1/1;
 }
 
-/* #index-hero {
+#index-hero {
     object-fit: cover;
-} */
+}
 
 #hero .grid-con {
-/* Telling this grid to live in the middle column */
    grid-column: 1/3;
-   /* also telling it stay in the first row, so it overlaps the hero image */
    grid-row:1/2;
-   /* get rid of margin 0 auto from the original class */
    margin: 0;
    margin-left: -15px;
 }
@@ -131,7 +130,7 @@ p h1 h2 h3 {
 
 #hero-backgound-box h2 {
     color: white;
-    font-size: 1.75em;
+    font-size: 1.7em;
 }
 
 /*Body*/
@@ -191,7 +190,6 @@ p h1 h2 h3 {
 #orange-bg img {
     width: 110px;
     padding-top: 25px;
-    z-index: 1;
 }
 
 .product-brief {
@@ -238,7 +236,6 @@ p h1 h2 h3 {
 #grape-bg img {
     width: 110px;
     padding-top: 25px;
-    z-index: 1;
 }
 
 #lemon-bg {
@@ -259,7 +256,6 @@ p h1 h2 h3 {
 #lemon-bg img {
     width: 110px;
     padding-top: 25px;
-    z-index: 1;
 }
 
 /*hover animation*/
@@ -331,7 +327,7 @@ p h1 h2 h3 {
 
 
 
-/*footor animation*/
+/*footer animation*/
 
 #footer ul li span {
     padding: 5px 10px;
@@ -363,30 +359,35 @@ p h1 h2 h3 {
         display: none;
     }
 
+    #sticky-nav-con {
+        background-color: white;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+
     #main-nav {
-        grid-row-start: 2;
-        margin: 10px;
+        background-color: white;
+        justify-self: right;
+        align-self: self-end;
+        z-index: 1;
+        grid-row-start: 1;
     }
 
     #burger-con {
-        display: block;
-        position: relative;
-        width: max-content;
-        height: max-content;
-        box-shadow: none;
-        background-color: white;
-        border-radius: 0;
-        margin-left: 40px;
-        
-    }
-    
-    #burger-con ul {
         display: inline;
-        margin: 0 0 0 100px;
-
+        position: inherit;
+        width: 0;
+        height: 0;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        /* margin-left: 40px; */
     }
         
-    #burger-con li {
+    #burger-con ul li {
         padding: 0;
         border-bottom: 0;
         display: inline;
@@ -394,24 +395,26 @@ p h1 h2 h3 {
     
     #burger-con ul li a {
         color: #D95CE0;
-        font-size: 1.4rem;
-        padding-right: 50px;
+        font-size: 1.4em;
+        padding-right: 35px;
     }
         
 
     #logo {
-        z-index: 1;
         justify-self: left;
         width: 400px;
         margin-bottom: 0;
         grid-row-start: 1;
-        grid-row-end: 3;
-
+        grid-row-end: 2;
     }
 
     #logo img {
-        width: 200px;
+        width: 250px;
         padding: 0 0;
+    }
+
+    #main-header {
+        order: 2;
     }
 
     #search-bar {
@@ -420,9 +423,20 @@ p h1 h2 h3 {
 
     /*body section*/
 
+    #hero-backgound-box {
+        padding-top: 20px;
+    }
+
+    #hero-backgound-box h2 {
+        font-size: 2.5em;
+        border-radius: 0 80px 0 0;
+        padding-bottom: -20px;
+    }
+
     #hero-summary {
         padding-bottom: 90px;
         border-radius: 0 0 200px 0;
+        padding-top: 20px;
     }
 
     #hero-summary h3 {
@@ -436,18 +450,15 @@ p h1 h2 h3 {
         margin-top: 15px;
         padding-left: 10px;
         margin-right: 30px;
-        font-size: 1.25rem;
-        line-height: 30px;
+        font-size: 1.25em;
+        line-height: 25px;
     }
 
     .products-section h2 {
         margin-left: 10px;
         margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .products-section h2 a {
-        font-size: 1.75em;
+        margin-bottom: 30px;        
+        font-size: 1.25em;
     }
 
     #orange-bg {
@@ -471,16 +482,19 @@ p h1 h2 h3 {
     #orange-bg img {
         width: 130px;
         padding-top: 60px;
+        filter: drop-shadow(-5px 5px 3px grey);
     }
 
     #grape-bg img {
         width: 130px;
         padding-top: 60px;
+        filter: drop-shadow(-5px 5px 3px grey);
     }
 
     #lemon-bg img {
         width: 130px;
         padding-top: 60px;
+        filter: drop-shadow(-5px 5px 3px grey);
     }
 
     .product-brief {
@@ -504,7 +518,6 @@ p h1 h2 h3 {
         font-weight: bold;
         cursor: pointer;
         font-size: 1.2em;
-
     }
 
     /*Footer*/
@@ -557,69 +570,44 @@ p h1 h2 h3 {
     
 /*header*/
 
-    #main-nav {
-        margin: 15px 15px;
-        justify-self: left;
-    }
-        
-    #burger-con li {
-        padding: 0;
-        border-bottom: 0;
-        display: inline;
-    }
-    
+
     #burger-con ul li a {
-        font-size: 1.6rem;
-        padding-right: 80px;
-    }
-        
-
-    #logo {
-        z-index: 1;
-        justify-self: left;
-        width: 520px;
-        margin-bottom: 0;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        margin-left: 30px;
+        font-size: 1.7em;
     }
 
-    #logo img {
-        width: 310px;
-        padding: 5px 0;
-    }
-
-    #search-bar {
-        display: none;
-    }
 
     #hero-backgound-box {
         background-color: #907EF2;
         padding-top: 50px;
         padding-bottom: 20px;
-        padding-left: 40px;
+        padding-left: 45px;
+        border-radius: 0 120px 0 0;
     }
     
     #hero-backgound-box h2 {
-        font-size: 3em;
+        font-size: 2.75em;
     }
 
-
     /*Body section*/
+
+    #hero-summary {
+        /* margin-left: -60px;
+        margin-right: -60px; */
+        padding-left: 10px;
+
+    }
     
     #hero-summary h3 {
-        padding-left: 30px;
-        font-size: 2.5rem;
-        padding-top: 30px;
-        
+        font-size: 2rem;
+        padding: 15px 20px 0 30px ;   
     }
     
     #hero-summary p {
         margin-top: 20px;
         padding-left: 30px;
-        margin-right: 20px;
-        font-size: 1.7rem;
-        line-height: 40px;
+        padding-right: 30px;
+        font-size: 1.5rem;
+        line-height: 30px;
     }
 
     /**Product section**/
@@ -687,7 +675,7 @@ p h1 h2 h3 {
     
     .product-brief p {
         font-size: 1.25rem;
-        height: 280px;
+        height: 200px;
         /* margin-left: 40px; */
     }
 
@@ -719,19 +707,23 @@ p h1 h2 h3 {
 
 }
 
-
 /*Product page*/
 
-/*Mobile size*/
+/*Mobile screen size*/
 
 .burple-products {
-    margin: 80px 30px 40px 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    justify-self: center;
 }
 
 .products-bg {
     border-radius: 90px 0 90px 0;
-    height: 350px;
-    width: 250x;
+    height: 310px;
+    width: 185px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -739,9 +731,13 @@ p h1 h2 h3 {
 }
 
 .products-bg img {
-    z-index: 1;
-    width: 130px;
-    margin-top: 30px;
+    width: 110px;
+    margin-top: 25px;
+    filter: drop-shadow(-5px 5px 3px grey);
+}
+
+.products-bg img:hover {
+    transform: scale(1.125);
 }
 
 .burple-products h3 {
@@ -785,11 +781,12 @@ p h1 h2 h3 {
 .line-seperator {
     width: auto;
     border-bottom: 5px dashed #D95CE0;
-    margin: 0 30px;
+    margin: 0 40px;
 }
 
 #labels-download {
-    margin: 50px 10px 30px 10px;
+    margin-top: 50px;
+    justify-content: center;
 }
 
 #labels-download h3 {
@@ -817,12 +814,138 @@ p h1 h2 h3 {
 }
 
 #download-gallery li button:hover {
-    width: 40px;
+    width: 35px;
     border-radius: 20px;
-    background-color: #873587;
     /* background-color: white;
     border: 6px solid #D95CE0; */
 }
 
+/*Tablet screen size*/
 
+@media screen and (min-width: 768px) {
 
+    .product-info {
+        margin-bottom: 20px;
+    }
+
+    .products-bg {
+        height: 420px;
+        width: 270px;
+    }
+
+    .burple-products {
+        margin: 80px 50px 40px 50px;
+    }
+
+    .products-bg img {
+        margin-top: 45px;
+        width: 150px;
+    }
+
+    .burple-products h3 {
+        font-size: 1.8em;
+        margin-left: -30px;
+    }
+
+    #labels-download {
+        margin-bottom: 60px;
+        padding: 0 30px;
+    }
+
+    #labels-download h3 {
+        font-size: 2em;
+    }
+    
+}
+
+/*Desktop screen size*/
+
+@media screen and (min-width: 1200px) {
+
+    .product-info {
+        margin-bottom: 40px;
+    }
+
+    .products-bg {
+        height: 530px;
+        width: 320px;
+        border-radius: 120px 0 150px 0;
+    }    
+
+    .products-bg img {
+        margin-top: 70px;
+        width: 170px;
+    }
+
+    .burple-products h3 {
+        font-size: 2.5em;
+    }
+
+    .line-seperator {
+        margin: 0 60px;
+    }
+
+}
+
+/*Contact page*/
+
+/*Mobile screen size*/
+
+#hero-summary-s {
+    background-color: #907EF2;
+    /* padding-bottom: 100px; */
+    height: 500px;
+    color: white;
+    padding-left: 20px;
+    border-radius: 0 0 300px 300px;
+    margin-bottom: 250px;
+}
+
+#hero-summary-s h3 {
+    padding: 12px 10px;
+    font-size: 1.5em;
+}
+
+#hero-summary-s p {
+    padding-left: 12px;
+    margin-right: 35px;
+    line-height: 25px;
+}
+
+#contact-form form {
+    position: absolute;
+    flex-direction: column;
+    top: 95%;
+    left: 10%;
+ }
+ 
+ #contact-form input, textarea {
+    padding: 22px;
+    border: 2px solid #907EF2;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    font: inherit;
+    width: 400px;
+ }
+ 
+ #contact-form textarea {
+    height: 250px;
+    margin-bottom: 40px;
+ }
+ 
+ #contact-form input[type="submit"] {
+    padding: 12px 28px;
+    background: #D95CE0;
+    border: 3px solid white;
+    outline: 2px solid #D95CE0;
+    color: #fff;
+    transition: all 200ms ease-in;
+    width: 150px;
+    position: absolute;
+    right: 0%;
+ }
+
+ #contact-form input[type="submit"]:hover {
+    background-color: #873587;
+    outline-color: #873587;
+ }
