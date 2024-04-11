@@ -9,7 +9,6 @@
     const buttons = document.querySelectorAll("#download-gallery li");
     const changeImg = document.querySelector("#img");
     
-    
 
 	function hamburgerMenu() {
 		// burgerCon.classList.toggle("slide-toggle");
