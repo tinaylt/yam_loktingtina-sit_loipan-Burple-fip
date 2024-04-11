@@ -41,7 +41,7 @@ p h1 h2 h3 {
     border: none;
     transition: all .5s ease;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 #main-nav button.expanded {
@@ -57,6 +57,7 @@ p h1 h2 h3 {
 
 #main-nav {
     justify-self: center;
+    padding-bottom: 20px;
 }
 
 #burger-con {
@@ -101,16 +102,33 @@ p h1 h2 h3 {
 }
 
 #search-bar button {
-    width: 100px;
-    height: 130px;
+    background: url(../images/search-bar.svg) no-repeat center;
+    width: 80px;
+    height: 80px;
     border: none;
-    background-color: white;
-    margin-left: -10px;
+    transition: all .5s ease;
     cursor: pointer;
+    margin-top: 25px;
 }
- #search-bar {
-    justify-self: center;
- }
+
+#searchExtend {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: white;
+    box-shadow: inset 0px 6px 10px rgb(183, 183, 183);
+    left: 0;
+    justify-content: center;
+}
+
+#searchExtend input {
+    border-radius: 40px;
+    border: 3px solid #CE5ED1;
+    padding: 20px;
+    width: 90%;
+}
+
+
 
 
 #index-hero {
@@ -428,7 +446,26 @@ p h1 h2 h3 {
     }
 
     #search-bar {
+        grid-row-start: 1;
+        justify-self: right;
+    }
+
+    #search-bar button {
         display: none;
+    }
+
+    #searchExtend {
+        display: block;
+        width: 300px;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        
+    }
+
+    #searchExtend input {
+        height: 40px;
+        padding: 10px;
     }
 
     /*body section*/
@@ -596,6 +633,10 @@ p h1 h2 h3 {
     
     #hero-backgound-box h2 {
         font-size: 2.75em;
+    }
+
+    #searchExtend {
+        left: 0%;
     }
 
     /*Body section*/
