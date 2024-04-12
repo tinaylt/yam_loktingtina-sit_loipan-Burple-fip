@@ -413,6 +413,8 @@ p h1 h2 h3 {
         align-self: self-end;
         z-index: 1;
         grid-row-start: 1;
+        padding-bottom: 0;
+
     }
 
     #burger-con {
