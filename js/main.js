@@ -10,34 +10,11 @@
     
     const buttons = document.querySelectorAll("#download-gallery li");
     const changeImg = document.querySelector("#img");
-
-    //option 3//
-    const lemonProduct = document.getElementById('lemon');
-    const orangeProduct = document.getElementById('orange');
-    const appleProduct = document.getElementById('apple');
-    const grapeProduct = document.getElementById('grape');
-    const cherryProduct = document.getElementById('cherry');
-    const peachProduct = document.getElementById('peach');
-
-    //option 3//
-    lemonProduct.addEventListener('click', function() {
-        updateLightboxBackground('images/label1.png');
-    });
-    orangeProduct.addEventListener('click', function() {
-        updateLightboxBackground('images/label2.png');
-    });
-    appleProduct.addEventListener('click', function() {
-        updateLightboxBackground('images/label3.png');
-    });
-    grapeProduct.addEventListener('click', function() {
-        updateLightboxBackground('images/label4.png');
-    });
-    cherryProduct.addEventListener('click', function() {
-        updateLightboxBackground('images/label5.png');
-    });
-    peachProduct.addEventListener('click', function() {
-        updateLightboxBackground('images/label6.png');
-    });
+    
+    const lightBox = document.getElementById("lightbox");
+    const links = document.querySelectorAll(".burple-products a")
+    
+    
 
 
 	function hamburgerMenu() {
@@ -55,16 +32,16 @@
         changeImg.src=`images/${e.currentTarget.dataset.downloads}.jpg`	
     };	
 
-    //lightbox//
-
-    function updateLightboxBackground(imageUrl) {
-        const lightbox = document.querySelector('.lightbox');
-        lightbox.style.backgroundImage = `url('${imageUrl}')`;
+    function lightboxBgImg() {
+        let flavor = this.getAttribute('data-flavor');
+        let imageUrl = 'images/label_' + flavor + '.png';
+        lightBox.style.backgroundImage = 'url(' + imageUrl +')';
     }
 
 
-    // links.forEach(link => link.addEventListener("click", changelabelImg));
 
+    
+    links.forEach(link => link.addEventListener("click", lightboxBgImg));
 	button.addEventListener("click", hamburgerMenu);	
     searchBut.addEventListener("click", searchBar);
     buttons.forEach(button => button.addEventListener("click", changePic));
