@@ -94,7 +94,6 @@ p h1 h2 h3 {
     justify-self: center;
     margin-top: 7px;
     cursor: pointer;
-    z-index: 1;
 }
 
 #logo img {
@@ -217,6 +216,7 @@ p h1 h2 h3 {
 #orange-bg img {
     width: 110px;
     padding-top: 25px;
+    filter: drop-shadow(-5px 5px 3px grey);
 }
 
 .product-brief {
@@ -263,6 +263,7 @@ p h1 h2 h3 {
 #grape-bg img {
     width: 110px;
     padding-top: 25px;
+    filter: drop-shadow(-5px 5px 3px grey);
 }
 
 #lemon-bg {
@@ -283,6 +284,7 @@ p h1 h2 h3 {
 #lemon-bg img {
     width: 110px;
     padding-top: 25px;
+    filter: drop-shadow(-5px 5px 3px grey);
 }
 
 /*hover animation*/
@@ -529,19 +531,16 @@ p h1 h2 h3 {
     #orange-bg img {
         width: 130px;
         padding-top: 60px;
-        filter: drop-shadow(-5px 5px 3px grey);
     }
 
     #grape-bg img {
         width: 130px;
         padding-top: 60px;
-        filter: drop-shadow(-5px 5px 3px grey);
     }
 
     #lemon-bg img {
         width: 130px;
         padding-top: 60px;
-        filter: drop-shadow(-5px 5px 3px grey);
     }
 
     .product-brief {
@@ -870,6 +869,36 @@ p h1 h2 h3 {
     /* background-color: white;
     border: 6px solid #D95CE0; */
 }
+
+/*LightBox CSS*/
+
+.lightbox {
+    width: 100vw;
+    height: 100vh;
+    z-index: 5000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-image: url(../images/label1.png);
+    background-repeat: no-repeat;
+    background-size: 70vh;
+    background-position: center;
+    /* box-shadow: 5px 5px 10px #907EF2; */
+    display: none;
+}
+
+.close {
+    position: relative;
+    top: 20px;
+    left: 89%;
+
+    color: #CE5ED1;
+    font-size: 1.8em;
+}
+
+
+.lightbox:target { display: block; }
 
 /*Tablet screen size*/
 
