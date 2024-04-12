@@ -8,7 +8,10 @@
     
     const buttons = document.querySelectorAll("#download-gallery li");
     const changeImg = document.querySelector("#img");
-    
+
+    const lightBox = document.querySelector("#lightbox");
+    const links = document.querySelectorAll('.product-info div a');
+
 
 	function hamburgerMenu() {
 		// burgerCon.classList.toggle("slide-toggle");
@@ -24,7 +27,22 @@
     function changePic(e) {	
         changeImg.src=`images/${e.currentTarget.dataset.downloads}.jpg`	
     };	
+
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	button.addEventListener("click", hamburgerMenu);	
     searchBut.addEventListener("click", searchBar);
